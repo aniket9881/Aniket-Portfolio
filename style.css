@@ -1,0 +1,157 @@
+:root {
+    --primary: #0f172a;
+    --accent: #2563eb;
+    --bg: #f4f6f9;
+    --text: #1f2937;
+    --card-bg: #ffffff;
+    --nav-bg: #0f172a;
+}
+
+/* DARK MODE VARIABLES */
+body.dark {
+    --primary: #111827;
+    --accent: #3b82f6;
+    --bg: #0b1120;
+    --text: #f9fafb;
+    --card-bg: #1f2937;
+    --nav-bg: #111827;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    scroll-behavior: smooth;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+/* HERO BUTTONS FIXED */
+
+.hero-buttons {
+    margin-top: 25px;
+}
+
+.btn, .btn-outline {
+    padding: 12px 24px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+/* Primary Button */
+.btn {
+    background: var(--accent);
+    color: #ffffff;
+    border: none;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-3px);
+}
+
+/* Outline Button */
+.btn-outline {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn-outline:hover {
+    background: #ffffff;
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #0f172a, #2563eb);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* NAV */
+nav {
+    background: var(--nav-bg);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a, nav button {
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* SECTIONS */
+.section {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.section h2 {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 5px;
+}
+
+/* CARDS */
+.card {
+    background: var(--card-bg);
+    color: var(--text);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+/* SKILLS */
+.skills span {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: var(--nav-bg);
+    color: white;
+}
